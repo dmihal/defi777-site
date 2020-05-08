@@ -6,7 +6,8 @@ const Page = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 0px 0 60px 30px #b1b1b1;
+  box-shadow: inset 0px 0 100px 60px rgba(125, 125, 125, 0.75);
+  box-sizing: border-box;
 `;
 
 export default Page;

@@ -3,16 +3,6 @@ import React from 'react';
 const Logo: React.FC = () => {
   return (
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2450 1400">
-      <style>{`
-      `}</style>
-
-      <g id="bg">
-        <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1224.25" y1="34.1124" x2="1224.25" y2="1376.2155">
-          <stop offset="0.139" style={{stopColor: '#0E161E'}}/>
-          <stop offset="0.6791" style={{stopColor: '#0E2036'}}/>
-        </linearGradient>
-        <rect x="-1.5" fill="url(#SVGID_1_)" width="2451.5" height="1400"/>
-      </g>
       <g id="shimmer">
         <radialGradient id="shimmerGrad" >
           <stop offset="60%" style={{stopColor: '#6460F4', stopOpacity: 0.4465 }}/>
