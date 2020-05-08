@@ -425,7 +425,7 @@ const Logo: React.FC = () => {
                 <clipPath id="SVGID_56_">
                   <use href="#SVGID_55_"  overflow="visible"/>
                 </clipPath>
-                <rect x="1201.5" y="522.5" clip-path="url(#SVGID_56_)" fill="url(#spinner)" width="269" height="420"/>
+                <rect x="1201.5" y="522.5" clipPath="url(#SVGID_56_)" fill="url(#spinner)" width="269" height="420"/>
 
                 <linearGradient id="spinner" gradientUnits="userSpaceOnUse" x1="1224.25" y1="522.5" x2="1224.25" y2="937.6">
                   <stop offset="0" style={{stopColor: '#2E3132'}}/>
@@ -447,7 +447,7 @@ const Logo: React.FC = () => {
               <clipPath id="SVGID_58_">
                 <use href="#SVGID_57_"  overflow="visible"/>
               </clipPath>
-              <rect x="1525.2" y="522.5" clip-path="url(#SVGID_58_)" fill="url(#spinner)" width="269" height="420"/>
+              <rect x="1525.2" y="522.5" clipPath="url(#SVGID_58_)" fill="url(#spinner)" width="269" height="420"/>
             </g>
             <path fill="#FBBD40" d="M1746.3,954.9h-173.2c-30.4,0-55.1-24.7-55.1-55.1V570.4c0-30.4,24.7-55.1,55.1-55.1h173.2
               c30.4,0,55.1,24.7,55.1,55.1v329.4C1801.5,930.1,1776.7,954.9,1746.3,954.9z M1573.1,529.7c-22.4,0-40.7,18.2-40.7,40.7v329.4
@@ -462,7 +462,7 @@ const Logo: React.FC = () => {
               <clipPath id="SVGID_60_">
                 <use href="#SVGID_59_"  overflow="visible"/>
               </clipPath>
-              <rect x="1848.9" y="522.5" clip-path="url(#SVGID_60_)" fill="url(#spinner)" width="269" height="420"/>
+              <rect x="1848.9" y="522.5" clipPath="url(#SVGID_60_)" fill="url(#spinner)" width="269" height="420"/>
             </g>
             <path fill="#FBBD40" d="M2070,954.9h-173.2c-30.4,0-55.1-24.7-55.1-55.1V570.4c0-30.4,24.7-55.1,55.1-55.1H2070
               c30.4,0,55.1,24.7,55.1,55.1v329.4C2125.2,930.1,2100.4,954.9,2070,954.9z M1896.9,529.7c-22.4,0-40.7,18.2-40.7,40.7v329.4
