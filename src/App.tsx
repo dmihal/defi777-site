@@ -2,18 +2,33 @@ import React from 'react';
 import styled from 'styled-components';
 import './App.css';
 import Logo from './Logo';
-
-const Page = styled.div`
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
+import uniswapLogo from './images/uniswap.svg';
+import trip7 from './images/trip-7.svg';
+import AavePage from './AavePage';
+import Page from './Page';
 
 const LandingPage = styled(Page)`
   background: linear-gradient(#0E161E, #0E2036);
 `;
+
+const UniswapLogo = styled.div`
+  background-image: url('${uniswapLogo}');
+  height: 90px;
+  width: 560px;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &:after {
+    content: '';
+    display: block;
+    background-image: url('${trip7}');
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+`;
+
 
 function App() {
   return (
@@ -41,7 +56,7 @@ function App() {
       </Page>
 
       <Page>
-        <h1>Uniswap777</h1>
+        <UniswapLogo />
         <p>Send ETH or 777 tokens to the following addresses to swap for that token</p>
         <ul>
           <li>
@@ -62,17 +77,7 @@ function App() {
         <p>Caution: Only send ERC777 wrappers to these addresses. Sending unwrapped ERC20 tokens will result in token loss.</p>
       </Page>
 
-      <Page>
-        <h1>Aave777</h1>
-        <p>Put your money to work! Swap your tokens for aTokens and start earning interest</p>
-        <p>Send tokens to aave777.eth</p>
-        <p>Aave777 supports all tokens that are available to lend in Aave:</p>
-        <ul>
-          <li>Dai-777</li>
-          <li>USDC-777</li>
-          <li>USDT-777</li>
-        </ul>
-      </Page>
+      <AavePage />
 
       <Page>
         <h1>Balancer777</h1>
