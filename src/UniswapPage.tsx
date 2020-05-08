@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import uniswapLogo from './images/uniswap.svg';
 import trip7 from './images/trip-7.svg';
+import Card from './Card';
 import Page from './Page';
 
 const UniswapPageContainer = styled(Page)`
@@ -26,25 +27,29 @@ const UniswapLogo = styled.div`
   }
 `;
 
+const Cards = styled.div`
+  display: flex;
+`;
+
 const BalancerPage = () => {
   return (
     <UniswapPageContainer>
       <UniswapLogo />
       <p>Send ETH or 777 tokens to the following addresses to swap for that token</p>
-      <ul>
-        <li>
+      <Cards>
+        <Card>
           <div>Swap to Dai</div>
           <div>dai.uniswap777.eth</div>
-        </li>
-        <li>
+        </Card>
+        <Card>
           <div>Swap to USDC</div>
           <div>usdc.uniswap777.eth</div>
-        </li>
-        <li>
+        </Card>
+        <Card>
           <div>Swap to MKR</div>
           <div>mkr.uniswap777.eth</div>
-        </li>
-      </ul>
+        </Card>
+      </Cards>
       <p>Want to swap to ETH? Send a token to it's own Uniswap address to swap into ETH</p>
       <p>Example: Send Dai777 to dai.uniswap.eth to swap into ETH</p>
       <p>Caution: Only send ERC777 wrappers to these addresses. Sending unwrapped ERC20 tokens will result in token loss.</p>
