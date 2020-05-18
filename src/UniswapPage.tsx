@@ -4,6 +4,9 @@ import uniswapLogo from './images/uniswap.svg';
 import trip7 from './images/trip-7.svg';
 import Card from './Card';
 import Page from './Page';
+import dai from './images/dai.svg';
+import usdc from './images/usdc.svg';
+import mkr from './images/mkr.svg';
 
 const UniswapPageContainer = styled(Page)`
   background: #f0a8be;
@@ -29,6 +32,7 @@ const UniswapLogo = styled.div`
 
 const Cards = styled.div`
   display: flex;
+  flex-wrap: wrap;
 `;
 
 const BalancerPage = () => {
@@ -37,17 +41,14 @@ const BalancerPage = () => {
       <UniswapLogo />
       <p>Send ETH or 777 tokens to the following addresses to swap for that token</p>
       <Cards>
-        <Card>
+        <Card corner={dai} domain="mkr.uniswap777.eth" address="0x000000">
           <div>Swap to Dai</div>
-          <div>dai.uniswap777.eth</div>
         </Card>
-        <Card>
+        <Card corner={usdc} domain="mkr.uniswap777.eth" address="0x000000">
           <div>Swap to USDC</div>
-          <div>usdc.uniswap777.eth</div>
         </Card>
-        <Card>
+        <Card corner={mkr} domain="mkr.uniswap777.eth" address="0x000000">
           <div>Swap to MKR</div>
-          <div>mkr.uniswap777.eth</div>
         </Card>
       </Cards>
       <p>Want to swap to ETH? Send a token to it's own Uniswap address to swap into ETH</p>

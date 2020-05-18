@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import QRCode from 'qrcode.react';
 
 const PlayingCard = styled.div<{ isFlipped: boolean }>`
   width: 140px;
@@ -33,7 +34,10 @@ const PlayingCard = styled.div<{ isFlipped: boolean }>`
     left: 0;
     background: #f6f3e9;
     border-radius: 10px;
-  box-shadow: 1px 1px 3px;
+    box-shadow: 1px 1px 3px;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
   }
 
 `;
@@ -45,14 +49,59 @@ const Back = styled.div`
   transform: rotateY(180deg);
 `;
 
-const Card: React.FC = ({ children }) => {
+const CardFace = styled.div<{ corner?: string }>`
+  margin: 20px;
+  border: solid 2px #444444;
+  border-radius: 4px;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  ${props => props.corner && `
+    &:before, &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      background-image: url('${props.corner}');
+      height: 16px;
+      width: 16px;
+    }
+
+    &:before {
+      top: -8px;
+      left: -20px;
+    }
+
+    &:after {
+      bottom: -8px;
+      right: -20px;
+    }
+  `}
+`;
+
+interface CardProps {
+  corner?: string;
+  domain: string;
+  address: string;
+}
+
+const Card: React.FC<CardProps> = ({ children, corner, address, domain }) => {
   const [isFlipped, setFlipped] = useState(false);
   return (
     <PlayingCard onClick={() => setFlipped(!isFlipped)} isFlipped={isFlipped}>
       <Front>
-        {children}
+        <CardFace corner={corner}>
+          {children}
+        </CardFace>
       </Front>
-      <Back>Back</Back>
+      <Back>
+        <QRCode value={address} />
+        <div>{domain}</div>
+        <div>{address}</div>
+      </Back>
     </PlayingCard>
   )
 }
