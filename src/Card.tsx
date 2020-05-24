@@ -47,6 +47,11 @@ const Front = styled.div`
 
 const Back = styled.div`
   transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  align-items: center;
+  justify-content: space-evenly;
 `;
 
 const CardFace = styled.div<{ corner?: string }>`
@@ -68,6 +73,7 @@ const CardFace = styled.div<{ corner?: string }>`
       background-image: url('${props.corner}');
       height: 16px;
       width: 16px;
+      background-repeat: no-repeat;
     }
 
     &:before {
@@ -80,6 +86,10 @@ const CardFace = styled.div<{ corner?: string }>`
       right: -20px;
     }
   `}
+`;
+
+const AddressRow = styled.div`
+  display: flex;
 `;
 
 interface CardProps {
@@ -100,7 +110,9 @@ const Card: React.FC<CardProps> = ({ children, corner, address, domain }) => {
       <Back>
         <QRCode value={address} />
         <div>{domain}</div>
-        <div>{address}</div>
+        <AddressRow onClick={(e: any) => e.stopPropagation()}>
+          {address.substr(0, 16)}
+        </AddressRow>
       </Back>
     </PlayingCard>
   )

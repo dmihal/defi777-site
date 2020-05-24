@@ -9,7 +9,7 @@ import usdc from './images/usdc.svg';
 import mkr from './images/mkr.svg';
 
 const UniswapPageContainer = styled(Page)`
-  background: #f0a8be;
+  background: #f4bece;
 `;
 
 const UniswapLogo = styled.div`
@@ -28,6 +28,21 @@ const UniswapLogo = styled.div`
     background-repeat: no-repeat;
     background-position: right center;
   }
+
+  @media (max-width: 760px) {
+    transform: scale(0.8);
+  }
+  @media (max-width: 570px) {
+    transform: scale(0.6);
+  }
+  @media (max-width: 440px) {
+    transform: scale(0.4);
+  }
+`;
+
+const BigText = styled.p`
+  font-size: 24px;
+  margin: 0 20px;
 `;
 
 const Cards = styled.div`
@@ -39,15 +54,16 @@ const BalancerPage = () => {
   return (
     <UniswapPageContainer>
       <UniswapLogo />
-      <p>Send ETH or 777 tokens to the following addresses to swap for that token</p>
+      <BigText>Send ETH or 777 tokens to the following addresses to swap for that token</BigText>
+      <p>Example: Send Dai777 to mkr.uniswap777.eth to swap for MKR777</p>
       <Cards>
-        <Card corner={dai} domain="mkr.uniswap777.eth" address="0x000000">
+        <Card corner={dai} domain="dai.uniswap777.eth" address="0x75339Bc10044e888B8635178a5752644a61F5217">
           <div>Swap to Dai</div>
         </Card>
-        <Card corner={usdc} domain="mkr.uniswap777.eth" address="0x000000">
+        <Card corner={usdc} domain="usdc.uniswap777.eth" address="0x7FD09A4dcdB7823695149947F03d22901e1c1Ecf">
           <div>Swap to USDC</div>
         </Card>
-        <Card corner={mkr} domain="mkr.uniswap777.eth" address="0x000000">
+        <Card corner={mkr} domain="mkr.uniswap777.eth" address="0xfda7ff1ba926263ca698f25f0fb01aa293d44896">
           <div>Swap to MKR</div>
         </Card>
       </Cards>
