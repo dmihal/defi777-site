@@ -3,6 +3,12 @@ import styled from 'styled-components';
 import balancerLogo from './images/balancer.svg';
 import trip7 from './images/trip-7.svg';
 import Page from './Page';
+import Card from './Card';
+import dai from './images/dai.svg';
+import usdc from './images/usdc.svg';
+import wbtc from './images/wbtc.svg';
+import link from './images/link.svg';
+
 
 const BalancerPageContainer = styled(Page)`
   background: #96dec7;
@@ -26,6 +32,11 @@ const BalancerLogo = styled.div`
   }
 `;
 
+const Cards = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
 const BalancerPage = () => {
   return (
     <BalancerPageContainer>
@@ -36,6 +47,20 @@ const BalancerPage = () => {
         <li>dai.balancer777.eth</li>
         <li>usdc.balancer777.eth</li>
       </ul>
+      <Cards>
+        <Card corner={dai} domain="dai.balancer777.eth" address="0x000000">
+          <div>Swap to Dai</div>
+        </Card>
+        <Card corner={usdc} domain="usdc.balancer777.eth" address="0x000000">
+          <div>Swap to USDC</div>
+        </Card>
+        <Card corner={wbtc} domain="wbtc.balancer777.eth" address="0x000000">
+          <div>Swap to WBTC</div>
+        </Card>
+        <Card corner={link} domain="link.balancer777.eth" address="0x000000">
+          <div>Swap to LINK</div>
+        </Card>
+      </Cards>
     </BalancerPageContainer>
   );
 }
