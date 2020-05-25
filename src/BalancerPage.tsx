@@ -30,6 +30,16 @@ const BalancerLogo = styled.div`
     background-repeat: no-repeat;
     background-position: right center;
   }
+
+  @media (max-width: 660px) {
+    transform: scale(0.8);
+  }
+  @media (max-width: 470px) {
+    transform: scale(0.6);
+  }
+  @media (max-width: 340px) {
+    transform: scale(0.4);
+  }
 `;
 
 
@@ -39,21 +49,17 @@ const BalancerPage = () => {
       <BalancerLogo />
       <h3>Swap tokens with low slippage using Balancer</h3>
       <p>Send 777 tokens to the address of your desired output, and it will automatically swap using the pool with the best price</p>
-      <ul>
-        <li>dai.balancer777.eth</li>
-        <li>usdc.balancer777.eth</li>
-      </ul>
       <Cards>
-        <Card corner={dai} domain="dai.balancer777.eth" address="0x000000">
+        <Card corner={dai} domain="dai.balancer777.eth" address="0xd4F61686A49e4f4151d59acc260D448EFe07439e">
           <div>Swap to Dai</div>
         </Card>
-        <Card corner={usdc} domain="usdc.balancer777.eth" address="0x000000">
+        <Card corner={usdc} domain="usdc.balancer777.eth" address="0xd049884C5eF0e8BBCf03265E0e3B98671959509D">
           <div>Swap to USDC</div>
         </Card>
-        <Card corner={wbtc} domain="wbtc.balancer777.eth" address="0x000000">
+        <Card corner={wbtc} domain="wbtc.balancer777.eth" address="0x98E28C255659C28c92Df5431a361279aC7320F8f">
           <div>Swap to WBTC</div>
         </Card>
-        <Card corner={link} domain="link.balancer777.eth" address="0x000000">
+        <Card corner={link} domain="link.balancer777.eth" address="0x0c8ca6e4F1383b53E601d3ED36c48A43c8f8402a">
           <div>Swap to LINK</div>
         </Card>
       </Cards>
