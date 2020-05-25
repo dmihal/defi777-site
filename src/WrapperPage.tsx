@@ -93,7 +93,7 @@ const WrapperPage = () => {
         </Card>
       </Cards>
       <p>These wrappers have already been created, however wrappers can be created for any ERC-20 token</p>
-      <p>Developers: these wrapper tokens also support </p>
+      <p>Developers: these wrapper tokens also support infinite flashloans and permit() metatransactions!</p>
     </WrapperPageContainer>
   );
 }

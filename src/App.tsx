@@ -4,6 +4,7 @@ import './App.css';
 import Logo from './Logo';
 import AavePage from './AavePage';
 import BalancerPage from './BalancerPage';
+import DevelopersPage from './DevelopersPage';
 import UniswapPage from './UniswapPage';
 import Page from './Page';
 import WrapperPage from './WrapperPage';
@@ -46,6 +47,8 @@ function App() {
       <AavePage />
 
       <BalancerPage />
+
+      <DevelopersPage />
     </div>
   );
 }
