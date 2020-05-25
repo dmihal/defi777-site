@@ -8,6 +8,7 @@ import DevelopersPage from './DevelopersPage';
 import UniswapPage from './UniswapPage';
 import Page from './Page';
 import WrapperPage from './WrapperPage';
+import SetPage from './SetPage';
 
 const LandingPage = styled(Page)`
   background: linear-gradient(#0E161E, #0E2036);
@@ -47,6 +48,8 @@ function App() {
       <AavePage />
 
       <BalancerPage />
+
+      <SetPage />
 
       <DevelopersPage />
     </div>

@@ -75,6 +75,7 @@ const CardFace = styled.div<{ corner?: string }>`
       width: 16px;
       background-repeat: no-repeat;
       background-position: center;
+      background-size: contain;
     }
 
     &:before {
