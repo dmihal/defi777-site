@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import aaveLogo from './images/aave.svg';
 import trip7 from './images/trip-7.svg';
 import Page from './Page';
-import Card from './Card';
+import AddressCard from './card/AddressCard';
 import dai from './images/dai.svg';
 import usdc from './images/usdc.svg';
 import eth from './images/eth.svg';
@@ -54,15 +54,15 @@ const AavePage = () => {
       <p>Send 777 tokens to aave777.eth to receive aToken777s</p>
 
       <Cards>
-        <Card corner={eth} domain="aave777.eth" address="0x729a15b1b2E695Fa4C948Ee138cFBbA609D668b4">
+        <AddressCard corner={eth} domain="aave777.eth" address="0x729a15b1b2E695Fa4C948Ee138cFBbA609D668b4">
           <div>Lend your ETH</div>
-        </Card>
-        <Card corner={dai} domain="aave777.eth" address="0x729a15b1b2E695Fa4C948Ee138cFBbA609D668b4">
+        </AddressCard>
+        <AddressCard corner={dai} domain="aave777.eth" address="0x729a15b1b2E695Fa4C948Ee138cFBbA609D668b4">
           <div>Lend your Dai</div>
-        </Card>
-        <Card corner={usdc} domain="aave777.eth" address="0x729a15b1b2E695Fa4C948Ee138cFBbA609D668b4">
+        </AddressCard>
+        <AddressCard corner={usdc} domain="aave777.eth" address="0x729a15b1b2E695Fa4C948Ee138cFBbA609D668b4">
           <div>Lend your USDC</div>
-        </Card>
+        </AddressCard>
       </Cards>
     </AavePageContainer>
   )

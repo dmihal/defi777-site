@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import uniswapLogo from './images/uniswap.svg';
 import trip7 from './images/trip-7.svg';
-import Card from './Card';
+import AddressCard from './card/AddressCard';
 import Cards from './card/Cards';
 import Page from './Page';
 import dai from './images/dai.svg';
@@ -53,15 +53,15 @@ const BalancerPage = () => {
       <BigText>Send ETH or 777 tokens to the following addresses to swap for that token</BigText>
       <p>Example: Send Dai777 to mkr.uniswap777.eth to swap for MKR777</p>
       <Cards>
-        <Card corner={dai} domain="dai.uniswap777.eth" address="0x75339Bc10044e888B8635178a5752644a61F5217">
+        <AddressCard corner={dai} domain="dai.uniswap777.eth" address="0x75339Bc10044e888B8635178a5752644a61F5217">
           <div>Swap to Dai</div>
-        </Card>
-        <Card corner={usdc} domain="usdc.uniswap777.eth" address="0x7FD09A4dcdB7823695149947F03d22901e1c1Ecf">
+        </AddressCard>
+        <AddressCard corner={usdc} domain="usdc.uniswap777.eth" address="0x7FD09A4dcdB7823695149947F03d22901e1c1Ecf">
           <div>Swap to USDC</div>
-        </Card>
-        <Card corner={mkr} domain="mkr.uniswap777.eth" address="0xfda7ff1ba926263ca698f25f0fb01aa293d44896">
+        </AddressCard>
+        <AddressCard corner={mkr} domain="mkr.uniswap777.eth" address="0xfda7ff1ba926263ca698f25f0fb01aa293d44896">
           <div>Swap to MKR</div>
-        </Card>
+        </AddressCard>
       </Cards>
       <p>Want to swap to ETH? Send a token to it's own Uniswap address to swap into ETH</p>
       <p>Example: Send Dai777 to dai.uniswap.eth to swap into ETH</p>

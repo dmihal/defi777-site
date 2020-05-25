@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import setLogo from './images/set.svg';
 import trip7 from './images/trip-7.svg';
 import Page from './Page';
-import Card from './Card';
+import AddressCard from './card/AddressCard';
 import Cards from './card/Cards';
 import linkethrsi from './images/linkethrsi.svg';
 
@@ -45,9 +45,9 @@ const SetPage = () => {
       <h3>Invest using Set tokens</h3>
       <p>Send 777 tokens to the address to purchase Set tokens</p>
       <Cards>
-        <Card corner={linkethrsi} domain="linkethrsi.set777.eth" address="0xCB58d31394eD376Ab8871cc1FaB0991B3eD08179">
+        <AddressCard corner={linkethrsi} domain="linkethrsi.set777.eth" address="0xCB58d31394eD376Ab8871cc1FaB0991B3eD08179">
           <div>LINK/ETH RSI</div>
-        </Card>
+        </AddressCard>
       </Cards>
     </SetPageContainer>
   );

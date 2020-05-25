@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import trip7 from './images/trip-7.svg';
-import Card from './Card';
+import AddressCard from './card/AddressCard';
 import Page from './Page';
 import ETHLogo from './ETHLogo';
 import PokerChip from './PokerChip';
@@ -67,25 +67,25 @@ const WrapperPage = () => {
           </PokerChip>
           <div>ETH doesn't need to be wrapped! You can send normal ETH to any DeFi777 address</div>
         </ChipContainer>
-        <Card corner={dai} domain="mkr.uniswap777.eth" address="0x000000">
+        <AddressCard corner={dai} domain="mkr.uniswap777.eth" address="0x000000">
           <div>Dai-777</div>
-        </Card>
-        <Card corner={usdc} domain="mkr.uniswap777.eth" address="0x000000">
+        </AddressCard>
+        <AddressCard corner={usdc} domain="mkr.uniswap777.eth" address="0x000000">
           <div>USDC-777</div>
-        </Card>
-        <Card corner={mkr} domain="mkr.uniswap777.eth" address="0x000000">
+        </AddressCard>
+        <AddressCard corner={mkr} domain="mkr.uniswap777.eth" address="0x000000">
           <div>MKR-777</div>
-        </Card>
-        <Card corner={link} domain="mkr.uniswap777.eth" address="0x000000">
+        </AddressCard>
+        <AddressCard corner={link} domain="mkr.uniswap777.eth" address="0x000000">
           <div>Link-777</div>
-        </Card>
-        <Card corner={wbtc} domain="mkr.uniswap777.eth" address="0x000000">
+        </AddressCard>
+        <AddressCard corner={wbtc} domain="mkr.uniswap777.eth" address="0x000000">
           <div>WBTC-777</div>
-        </Card>
-        <Card corner={mkr} domain="defi777.eth" address="0x000000">
+        </AddressCard>
+        <AddressCard corner={mkr} domain="defi777.eth" address="0x000000">
           <div>Unwrap any DeFi777 token</div>
           <div>Send them to defi777.eth, receive the wrapped token</div>
-        </Card>
+        </AddressCard>
       </Cards>
       <p>These wrappers have already been created, however wrappers can be created for any ERC-20 token</p>
       <p>Developers: these wrapper tokens also support infinite flashloans and permit() metatransactions!</p>

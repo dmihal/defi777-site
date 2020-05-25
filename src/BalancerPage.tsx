@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import balancerLogo from './images/balancer.svg';
 import trip7 from './images/trip-7.svg';
 import Page from './Page';
-import Card from './Card';
+import AddressCard from './card/AddressCard';
 import dai from './images/dai.svg';
 import usdc from './images/usdc.svg';
 import wbtc from './images/wbtc.svg';
@@ -50,18 +50,18 @@ const BalancerPage = () => {
       <h3>Swap tokens with low slippage using Balancer</h3>
       <p>Send 777 tokens to the address of your desired output, and it will automatically swap using the pool with the best price</p>
       <Cards>
-        <Card corner={dai} domain="dai.balancer777.eth" address="0xd4F61686A49e4f4151d59acc260D448EFe07439e">
+        <AddressCard corner={dai} domain="dai.balancer777.eth" address="0xd4F61686A49e4f4151d59acc260D448EFe07439e">
           <div>Swap to Dai</div>
-        </Card>
-        <Card corner={usdc} domain="usdc.balancer777.eth" address="0xd049884C5eF0e8BBCf03265E0e3B98671959509D">
+        </AddressCard>
+        <AddressCard corner={usdc} domain="usdc.balancer777.eth" address="0xd049884C5eF0e8BBCf03265E0e3B98671959509D">
           <div>Swap to USDC</div>
-        </Card>
-        <Card corner={wbtc} domain="wbtc.balancer777.eth" address="0x98E28C255659C28c92Df5431a361279aC7320F8f">
+        </AddressCard>
+        <AddressCard corner={wbtc} domain="wbtc.balancer777.eth" address="0x98E28C255659C28c92Df5431a361279aC7320F8f">
           <div>Swap to WBTC</div>
-        </Card>
-        <Card corner={link} domain="link.balancer777.eth" address="0x0c8ca6e4F1383b53E601d3ED36c48A43c8f8402a">
+        </AddressCard>
+        <AddressCard corner={link} domain="link.balancer777.eth" address="0x0c8ca6e4F1383b53E601d3ED36c48A43c8f8402a">
           <div>Swap to LINK</div>
-        </Card>
+        </AddressCard>
       </Cards>
     </BalancerPageContainer>
   );
