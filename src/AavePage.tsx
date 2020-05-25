@@ -3,6 +3,10 @@ import styled from 'styled-components';
 import aaveLogo from './images/aave.svg';
 import trip7 from './images/trip-7.svg';
 import Page from './Page';
+import Card from './Card';
+import dai from './images/dai.svg';
+import usdc from './images/usdc.svg';
+import eth from './images/eth.svg';
 
 const AavePageContainer = styled(Page)`
   background: #e7d0e4;
@@ -24,20 +28,46 @@ const AaveLogo = styled.div`
     background-repeat: no-repeat;
     background-position: right center;
   }
+
+  @media (max-width: 760px) {
+    transform: scale(0.8);
+  }
+  @media (max-width: 570px) {
+    transform: scale(0.6);
+  }
+  @media (max-width: 440px) {
+    transform: scale(0.4);
+  }
+`;
+
+const BigText = styled.p`
+  font-size: 24px;
+  margin: 0 20px;
+`;
+
+const Cards = styled.div`
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 const AavePage = () => {
   return (
     <AavePageContainer>
       <AaveLogo />
-      <p>Put your money to work! Swap your tokens for aTokens and start earning interest</p>
-        <p>Send tokens to aave777.eth</p>
-        <p>Aave777 supports all tokens that are available to lend in Aave:</p>
-        <ul>
-          <li>Dai-777</li>
-          <li>USDC-777</li>
-          <li>USDT-777</li>
-        </ul>
+      <BigText>Put your money to work! Swap your tokens for aTokens and start earning interest</BigText>
+      <p>Send 777 tokens to aave777.eth to receive aToken777s</p>
+
+      <Cards>
+        <Card corner={eth} domain="aave777.eth" address="0x729a15b1b2E695Fa4C948Ee138cFBbA609D668b4">
+          <div>Lend your ETH</div>
+        </Card>
+        <Card corner={dai} domain="aave777.eth" address="0x729a15b1b2E695Fa4C948Ee138cFBbA609D668b4">
+          <div>Lend your Dai</div>
+        </Card>
+        <Card corner={usdc} domain="aave777.eth" address="0x729a15b1b2E695Fa4C948Ee138cFBbA609D668b4">
+          <div>Lend your USDC</div>
+        </Card>
+      </Cards>
     </AavePageContainer>
   )
 }
