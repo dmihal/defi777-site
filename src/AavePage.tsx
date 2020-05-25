@@ -7,6 +7,7 @@ import Card from './Card';
 import dai from './images/dai.svg';
 import usdc from './images/usdc.svg';
 import eth from './images/eth.svg';
+import Cards from './card/Cards';
 
 const AavePageContainer = styled(Page)`
   background: #e7d0e4;
@@ -43,11 +44,6 @@ const AaveLogo = styled.div`
 const BigText = styled.p`
   font-size: 24px;
   margin: 0 20px;
-`;
-
-const Cards = styled.div`
-  display: flex;
-  flex-wrap: wrap;
 `;
 
 const AavePage = () => {

@@ -4,6 +4,7 @@ import setLogo from './images/set.svg';
 import trip7 from './images/trip-7.svg';
 import Page from './Page';
 import Card from './Card';
+import Cards from './card/Cards';
 import linkethrsi from './images/linkethrsi.svg';
 
 
@@ -35,11 +36,6 @@ const BalancerLogo = styled.div`
   @media (max-width: 440px) {
     transform: scale(0.6);
   }
-`;
-
-const Cards = styled.div`
-  display: flex;
-  flex-wrap: wrap;
 `;
 
 const SetPage = () => {

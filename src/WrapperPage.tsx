@@ -10,6 +10,7 @@ import usdc from './images/usdc.svg';
 import mkr from './images/mkr.svg';
 import link from './images/link.svg';
 import wbtc from './images/wbtc.svg';
+import Cards from './card/Cards';
 
 const WrapperPageContainer = styled(Page)`
   background: #aaa8f0;
@@ -42,12 +43,6 @@ const WrapperLogo = styled.div`
   @media (max-width: 440px) {
     transform: scale(0.4);
   }
-`;
-
-const Cards = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 `;
 
 const ChipContainer = styled.div`

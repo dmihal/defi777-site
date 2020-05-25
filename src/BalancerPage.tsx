@@ -8,7 +8,7 @@ import dai from './images/dai.svg';
 import usdc from './images/usdc.svg';
 import wbtc from './images/wbtc.svg';
 import link from './images/link.svg';
-
+import Cards from './card/Cards';
 
 const BalancerPageContainer = styled(Page)`
   background: #96dec7;
@@ -32,10 +32,6 @@ const BalancerLogo = styled.div`
   }
 `;
 
-const Cards = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`;
 
 const BalancerPage = () => {
   return (

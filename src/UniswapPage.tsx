@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import uniswapLogo from './images/uniswap.svg';
 import trip7 from './images/trip-7.svg';
 import Card from './Card';
+import Cards from './card/Cards';
 import Page from './Page';
 import dai from './images/dai.svg';
 import usdc from './images/usdc.svg';
@@ -43,11 +44,6 @@ const UniswapLogo = styled.div`
 const BigText = styled.p`
   font-size: 24px;
   margin: 0 20px;
-`;
-
-const Cards = styled.div`
-  display: flex;
-  flex-wrap: wrap;
 `;
 
 const BalancerPage = () => {
