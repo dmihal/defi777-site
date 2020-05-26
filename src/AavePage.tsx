@@ -8,6 +8,7 @@ import dai from './images/dai.svg';
 import usdc from './images/usdc.svg';
 import eth from './images/eth.svg';
 import Cards from './card/Cards';
+import { SubHeading } from './typography';
 
 const AavePageContainer = styled(Page)`
   background: #e7d0e4;
@@ -41,16 +42,12 @@ const AaveLogo = styled.div`
   }
 `;
 
-const BigText = styled.p`
-  font-size: 24px;
-  margin: 0 20px;
-`;
 
 const AavePage = () => {
   return (
     <AavePageContainer>
       <AaveLogo />
-      <BigText>Put your money to work! Swap your tokens for aTokens and start earning interest</BigText>
+      <SubHeading>Put your money to work! Swap your tokens for aTokens and start earning interest</SubHeading>
       <p>Send 777 tokens to aave777.eth to receive aToken777s</p>
 
       <Cards>

@@ -8,6 +8,7 @@ import Page from './Page';
 import dai from './images/dai.svg';
 import usdc from './images/usdc.svg';
 import mkr from './images/mkr.svg';
+import { SubHeading } from './typography';
 
 const UniswapPageContainer = styled(Page)`
   background: #f4bece;
@@ -41,16 +42,11 @@ const UniswapLogo = styled.div`
   }
 `;
 
-const BigText = styled.p`
-  font-size: 24px;
-  margin: 0 20px;
-`;
-
 const BalancerPage = () => {
   return (
     <UniswapPageContainer>
       <UniswapLogo />
-      <BigText>Send ETH or 777 tokens to the following addresses to swap for that token</BigText>
+      <SubHeading>Send ETH or 777 tokens to the following addresses to swap for that token</SubHeading>
       <p>Example: Send Dai777 to mkr.uniswap777.eth to swap for MKR777</p>
       <Cards>
         <AddressCard corner={dai} domain="dai.uniswap777.eth" address="0x75339Bc10044e888B8635178a5752644a61F5217">

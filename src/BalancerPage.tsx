@@ -9,6 +9,7 @@ import usdc from './images/usdc.svg';
 import wbtc from './images/wbtc.svg';
 import link from './images/link.svg';
 import Cards from './card/Cards';
+import { SubHeading } from './typography';
 
 const BalancerPageContainer = styled(Page)`
   background: #96dec7;
@@ -47,7 +48,7 @@ const BalancerPage = () => {
   return (
     <BalancerPageContainer>
       <BalancerLogo />
-      <h3>Swap tokens with low slippage using Balancer</h3>
+      <SubHeading>Swap tokens with low slippage using Balancer</SubHeading>
       <p>Send 777 tokens to the address of your desired output, and it will automatically swap using the pool with the best price</p>
       <Cards>
         <AddressCard corner={dai} domain="dai.balancer777.eth" address="0xd4F61686A49e4f4151d59acc260D448EFe07439e">

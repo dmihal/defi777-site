@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Page from './Page';
+import { Heading, SubHeading } from './typography';
 
 const IntroPageContainer = styled(Page)`
   background: #f75252;
@@ -9,13 +10,13 @@ const IntroPageContainer = styled(Page)`
 const IntroPage = () => {
   return (
     <IntroPageContainer>
-      <h1>Use DeFi in any wallet</h1>
+      <Heading>Use DeFi in any wallet</Heading>
+      <SubHeading>
+        Using DeFi is as simple as sending a token!
+      </SubHeading>
       <p>
         DeFi777 wraps all the best Ethereum Tokens (Dai, USDC, MKR, etc) and best DeFi products {}
         (Uniswap, Aave, Balancer, etc) so you can use them in any wallet.
-      </p>
-      <p>
-        Using DeFi is as simple as sending a token!
       </p>
       <p>
         Nerd stuff: DeFi777 uses ERC777 tokens with receive hooks to trigger common DeFi actions.

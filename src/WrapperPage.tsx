@@ -13,12 +13,13 @@ import wbtc from './images/wbtc.svg';
 import Cards from './card/Cards';
 import BaseCard from './card/BaseCard';
 import IconWithTrip7 from './IconWithTrip7';
+import { Heading, SubHeading } from './typography';
 
 const WrapperPageContainer = styled(Page)`
   background: #aaa8f0;
 `;
 
-const WrapperLogo = styled.div`
+const WrapperLogo = styled(Heading)`
   background-image: url('${trip7}');
   height: 90px;
   width: 660px;
@@ -26,7 +27,7 @@ const WrapperLogo = styled.div`
   background-repeat: no-repeat;
   display: flex;
   justify-content: space-between;
-  background-position: 34%;
+  background-position: 36%;
   font-size: 70px;
 
   &:before {
@@ -61,7 +62,9 @@ const WrapperPage = () => {
   return (
     <WrapperPageContainer>
       <WrapperLogo />
-      <p>DeFi777 supercharges your favorite ERC-20 tokens by wrapping them into ERC-777 tokens</p>
+      <SubHeading>
+        DeFi777 supercharges your favorite ERC-20 tokens by wrapping them into ERC-777 tokens
+      </SubHeading>
       <Cards>
         <ChipContainer>
           <PokerChip>

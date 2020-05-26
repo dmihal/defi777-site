@@ -39,6 +39,7 @@ const Face = styled.div`
   display: flex;
   flex-direction: column;
   z-index: 0;
+  align-items: center;
 `;
 
 const Front = styled(Face)<{ grow?: boolean; isFlipped: boolean }>`

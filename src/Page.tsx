@@ -10,6 +10,7 @@ const Page = styled.div`
   box-sizing: border-box;
   perspective: 600px;
   padding: 40px;
+  font-family: 'Raleway', sans-serif;
 `;
 
 export default Page;
