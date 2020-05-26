@@ -6,6 +6,7 @@ import Page from './Page';
 import AddressCard from './card/AddressCard';
 import Cards from './card/Cards';
 import linkethrsi from './images/linkethrsi.svg';
+import { SubHeading } from './typography';
 
 
 const SetPageContainer = styled(Page)`
@@ -42,7 +43,7 @@ const SetPage = () => {
   return (
     <SetPageContainer>
       <BalancerLogo />
-      <h3>Invest using Set tokens</h3>
+      <SubHeading>Invest using Set tokens</SubHeading>
       <p>Send 777 tokens to the address to purchase Set tokens</p>
       <Cards>
         <AddressCard corner={linkethrsi} domain="linkethrsi.set777.eth" address="0xCB58d31394eD376Ab8871cc1FaB0991B3eD08179">

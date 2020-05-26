@@ -12,6 +12,7 @@ import { SubHeading } from './typography';
 
 const UniswapPageContainer = styled(Page)`
   background: #f4bece;
+  box-shadow: inset 0px 0 100px 60px #eae0be;
 `;
 
 const UniswapLogo = styled.div`
