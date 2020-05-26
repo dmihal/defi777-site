@@ -59,7 +59,7 @@ const AddressCard: React.FC<CardProps> = ({ children, corner, address, domain })
       }
       back={
         <Fragment>
-          <QRCode value={address} />
+          <QRCode value={address} renderAs="svg" />
           <div>{domain}</div>
           <AddressRow onClick={(e: any) => e.stopPropagation()}>
             {address.substr(0, 16)}

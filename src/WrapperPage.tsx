@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import trip7 from './images/trip-7.svg';
-import AddressCard from './card/AddressCard';
+import WrapperCard from './WrapperCard';
 import Page from './Page';
 import ETHLogo from './ETHLogo';
 import PokerChip from './PokerChip';
@@ -11,6 +11,7 @@ import mkr from './images/mkr.svg';
 import link from './images/link.svg';
 import wbtc from './images/wbtc.svg';
 import Cards from './card/Cards';
+import BaseCard from './card/BaseCard';
 
 const WrapperPageContainer = styled(Page)`
   background: #aaa8f0;
@@ -67,25 +68,30 @@ const WrapperPage = () => {
           </PokerChip>
           <div>ETH doesn't need to be wrapped! You can send normal ETH to any DeFi777 address</div>
         </ChipContainer>
-        <AddressCard corner={dai} domain="mkr.uniswap777.eth" address="0x000000">
+        <WrapperCard token="0x6b175474e89094c44da98b954eedeac495271d0f" wrapper="0x15ABbcEb05be919df1b4894B01945A8264222de7">
           <div>Dai-777</div>
-        </AddressCard>
-        <AddressCard corner={usdc} domain="mkr.uniswap777.eth" address="0x000000">
+        </WrapperCard>
+        <WrapperCard token="0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48" wrapper="0xc4a51feed0b152f8c88be5867e8148db9c2dc08f">
           <div>USDC-777</div>
-        </AddressCard>
-        <AddressCard corner={mkr} domain="mkr.uniswap777.eth" address="0x000000">
+        </WrapperCard>
+        <WrapperCard token="0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2" wrapper="0x058042F7d66a1eb91552839F391bfBe930ddC137">
           <div>MKR-777</div>
-        </AddressCard>
-        <AddressCard corner={link} domain="mkr.uniswap777.eth" address="0x000000">
+        </WrapperCard>
+        <WrapperCard token="0x514910771af9ca656af840dff83e8264ecf986ca" wrapper="0x879DCd0287Aed4a93Cc647cB0804f098E1611488">
           <div>Link-777</div>
-        </AddressCard>
-        <AddressCard corner={wbtc} domain="mkr.uniswap777.eth" address="0x000000">
+        </WrapperCard>
+        <WrapperCard token="0x2260fac5e5542a773aa44fbcfedf7c193bc2c599" wrapper="0x3fb3b69adf18fe93a04083a07f14246186613e4c">
           <div>WBTC-777</div>
-        </AddressCard>
-        <AddressCard corner={mkr} domain="defi777.eth" address="0x000000">
-          <div>Unwrap any DeFi777 token</div>
-          <div>Send them to defi777.eth, receive the wrapped token</div>
-        </AddressCard>
+        </WrapperCard>
+        <BaseCard
+          front={
+            <Fragment>
+              <div>Unwrap any DeFi777 token</div>
+              <div>Send them to defi777.eth, receive the wrapped token</div>
+            </Fragment>
+          }
+          back={<Fragment />}
+        />
       </Cards>
       <p>These wrappers have already been created, however wrappers can be created for any ERC-20 token</p>
       <p>Developers: these wrapper tokens also support infinite flashloans and permit() metatransactions!</p>
