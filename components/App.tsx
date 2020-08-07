@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import './App.css';
 import Logo from './Logo';
 import AavePage from './AavePage';
 import BalancerPage from './BalancerPage';
@@ -11,6 +10,10 @@ import WrapperPage from './WrapperPage';
 import SetPage from './SetPage';
 import IntroPage from './IntroPage';
 
+const Container = styled.div`
+  text-align: center;
+`;
+
 const LandingPage = styled(Page)`
   background: linear-gradient(#0E161E, #0E2036);
   padding: 42px;
@@ -18,8 +21,9 @@ const LandingPage = styled(Page)`
 `;
 
 function App() {
+  // window.document.body.style.background = '#0f1010';
   return (
-    <div className="App">
+    <Container>
       <LandingPage>
         <Logo />
       </LandingPage>
@@ -37,7 +41,7 @@ function App() {
       <SetPage />
 
       <DevelopersPage />
-    </div>
+    </Container>
   );
 }
 
