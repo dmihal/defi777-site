@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Web3 from 'web3';
 import WrapperFactory from '../components/protocol-trackers/WrapperFactory';
+import Uniswap from '../components/protocol-trackers/Uniswap';
 
 const NetworkPage = () => {
   const [network, setNetwork] = useState<number>(0);
@@ -32,6 +33,7 @@ const NetworkPage = () => {
   return (
     <div>
       <WrapperFactory web3={web3.current!} network={network} />
+      <Uniswap web3={web3.current!} network={network} />
     </div>
   );
 };
