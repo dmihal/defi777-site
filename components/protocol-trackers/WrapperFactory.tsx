@@ -3,12 +3,15 @@ import Web3 from 'web3';
 import contracts from '../../constants/contracts';
 import WrapperFactoryABI from '../../constants/abis/WrapperFactory.json';
 import Wrapper from './Wrapper';
+import { create2PreHashed } from '../../utils/create2';
 
 const SCAN_BLOCKS = 5000;
 
 const scanForWrappers = async (web3: Web3, network: number, cb: (wrapper: string) => void) => {
   const { address, created } = contracts[network].WrapperFactory;
   const contract = new web3.eth.Contract(WrapperFactoryABI as any, address);
+
+  const codeHash = await contract.methods.WRAPPER_BYTECODE_HASH().call();
 
   const currentBlock = await web3.eth.getBlockNumber();
   for (let fromBlock = created; fromBlock < currentBlock; fromBlock += SCAN_BLOCKS) {
@@ -18,7 +21,8 @@ const scanForWrappers = async (web3: Web3, network: number, cb: (wrapper: string
     });
 
     for (const event of events) {
-      cb(event.returnValues.token);
+      const wrapper = create2PreHashed(address, event.returnValues.token, codeHash);
+      cb(wrapper);
     }
   }
 };
@@ -31,6 +35,10 @@ const createWrapper = async (web3: Web3, network: number, token: string) => {
   await web3.currentProvider.enable();
   const [from] = await web3.eth.getAccounts();
   await contract.methods.createWrapper(token).send({ from });
+
+  const codeHash = await contract.methods.WRAPPER_BYTECODE_HASH().call();
+  const wrapper = create2PreHashed(address, token, codeHash);
+  return wrapper;
 };
 
 interface WrapperFactoryProps {
@@ -40,7 +48,7 @@ interface WrapperFactoryProps {
 
 const WrapperFactory: React.FC<WrapperFactoryProps> = ({ web3, network }) => {
   const [wrappers, setWrappers] = useState<string[]>([]);
-  const [newWrapper, setNewWrapper] = useState('');
+  const [newToken, setNewToken] = useState('');
   const [loading, setLoading] = useState(false);
 
   if (!contracts[network]) {
@@ -57,9 +65,9 @@ const WrapperFactory: React.FC<WrapperFactoryProps> = ({ web3, network }) => {
   const create = async () => {
     setLoading(true);
     try {
-      await createWrapper(web3, network, newWrapper);
+      const newWrapper = await createWrapper(web3, network, newToken);
       setWrappers([...wrappers, newWrapper]);
-      setNewWrapper('');
+      setNewToken('');
     } catch (e) {
       console.error(e);
     }
@@ -78,11 +86,11 @@ const WrapperFactory: React.FC<WrapperFactoryProps> = ({ web3, network }) => {
         Create new wrapper
         <input
           placeholder="token address"
-          value={newWrapper}
-          onChange={(e: any) => setNewWrapper(e.target.value)}
+          value={newToken}
+          onChange={(e: any) => setNewToken(e.target.value)}
           disabled={loading}
         />
-        <button onClick={create} disabled={newWrapper.length !== 42 || loading}>Create</button>
+        <button onClick={create} disabled={newToken.length !== 42 || loading}>Create</button>
       </div>
     </div>
   )
