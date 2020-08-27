@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Web3 from 'web3';
 import AddressBook from '../components/protocol-trackers/AddressBook';
 import WrapperFactory from '../components/protocol-trackers/WrapperFactory';
+import FarmerTokenFactory from '../components/protocol-trackers/FarmerTokenFactory';
 import Uniswap from '../components/protocol-trackers/Uniswap';
 
 const NetworkPage = () => {
@@ -35,6 +36,7 @@ const NetworkPage = () => {
     <div>
       <WrapperFactory web3={web3.current!} network={network} />
       <AddressBook web3={web3.current!} network={network} />
+      <FarmerTokenFactory web3={web3.current!} network={network} />
       <Uniswap web3={web3.current!} network={network} />
     </div>
   );

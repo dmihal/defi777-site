@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import getWeb3 from './web3';
-import IERC20ABI from './abis/IERC20.json';
+import IERC20ABI from '../constants/abis/IERC20.json';
 import IWrapped777ABI from './abis/IWrapped777.json';
 
 interface TokenWrapperProps {
