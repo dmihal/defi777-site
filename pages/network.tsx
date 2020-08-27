@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Web3 from 'web3';
+import AddressBook from '../components/protocol-trackers/AddressBook';
 import WrapperFactory from '../components/protocol-trackers/WrapperFactory';
 import Uniswap from '../components/protocol-trackers/Uniswap';
 
@@ -33,6 +34,7 @@ const NetworkPage = () => {
   return (
     <div>
       <WrapperFactory web3={web3.current!} network={network} />
+      <AddressBook web3={web3.current!} network={network} />
       <Uniswap web3={web3.current!} network={network} />
     </div>
   );
